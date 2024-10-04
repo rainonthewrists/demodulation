@@ -7,7 +7,7 @@ const frameSize = 100;
 const occupiedAreas = [];
 
 function setup() {
-  createCanvas(1280, 720);
+  createCanvas(1920, 1080);
   background(0);
   
   speechRec = new p5.SpeechRec('ru-RU', gotSpeech);
@@ -16,7 +16,7 @@ function setup() {
 
   startRecognition();
 
-  textSize(18);
+  textSize(24);
   fill(255);
 }
 
@@ -34,7 +34,7 @@ function draw() {
     }
     
     for (let j = 0; j < phrase.lines.length; j++) {
-      text(phrase.lines[j].toLowerCase(), phrase.x, phrase.y + j * 20);
+      text(phrase.lines[j].toLowerCase(), phrase.x, phrase.y + j * 30);
     }
     
     // Decrease alpha but stop at 30% transparency
